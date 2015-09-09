@@ -23,3 +23,12 @@ h6 {
 .paragraph {
     margin: 0 0 1rem;
 }
+.code {
+    font-family: $code_font;
+}
+.code--inline {
+    color: yellow;
+    background-color: $black;
+    padding: 0 0.25rem;
+    margin: 0 0.125rem;
+}

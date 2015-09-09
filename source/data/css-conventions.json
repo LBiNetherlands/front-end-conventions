@@ -44,10 +44,10 @@
                 },
                 {
                     "title": "Sass import.scss",
-                    "description": "The Sass import.scss file is the main Sass file that imports all other files when being compiled by the Sass compiler.",
+                    "description": "The Sass <span class=\"code code--inline\">import.scss</span> file is the main Sass file that imports all other files when being compiled by the Sass compiler.",
                     "code-snippet": {
                         "language": "css",
-                        "code": "// --------------------------------------------------\n//  Commons.\n// --------------------------------------------------\n\n@import \"susy\";\n@import \"../../node_modules/normalize-scss/normalize\";\n@import \"../../node_modules/prismjs/themes/prism-funky.css\";\n\n\n// --------------------------------------------------\n//  Generics.\n// --------------------------------------------------\n\n@import \"generics/fonts\";\n@import \"generics/settings\";\n@import \"generics/base\";\n@import \"generics/animations\";\n@import \"generics/typography\";\n@import \"generics/site-properties\";\n@import \"generics/generic\";\n\n\n// --------------------------------------------------\n//  Components.\n// --------------------------------------------------\n\n@import \"components/header\";\n@import \"components/footer\";\n@import \"components/convention\";"
+                        "code": "// --------------------------------------------------\n//  Commons.\n// --------------------------------------------------\n\n@import \"susy\";\n@import \"../../node_modules/normalize-scss/normalize\";\n\n\n// --------------------------------------------------\n//  Configurations.\n// --------------------------------------------------\n\n@import \"configurations/base\";\n@import \"configurations/fonts\";\n@import \"configurations/settings\";\n@import \"configurations/site-properties\";\n\n\n// --------------------------------------------------\n//  Generics.\n// --------------------------------------------------\n\n@import \"generics/animations\";\n@import \"generics/typography\";\n@import \"generics/generic\";\n\n\n// --------------------------------------------------\n//  Components.\n// --------------------------------------------------\n\n@import \"components/header\";\n@import \"components/footer\";"
                     }
                 }
             ]
@@ -66,7 +66,7 @@
                 },
                 {
                     "title": "Child element indentation",
-                    "description": "Indent your code properly, just like your HTML is structured, so a developer can see that .foo_baz lives inside .foo_bar lives inside .foo.",
+                    "description": "Indent your code properly, just like your HTML is structured, so a developer can see that <span class=\"code code--inline\">.foo__baz</span> and <span class=\"code code--inline\">.foo__bar</span> are nested whitin <span class=\"code code--inline\">.foo</span>.",
                     "code-snippet": {
                         "language": "css",
                         "code": ".foo {}\n    .foo__bar {}\n    .foo__baz {}"

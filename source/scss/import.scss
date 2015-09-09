@@ -8,15 +8,21 @@
 
 
 // --------------------------------------------------
+//  Configurations.
+// --------------------------------------------------
+
+@import "configurations/base";
+@import "configurations/fonts";
+@import "configurations/settings";
+@import "configurations/site-properties";
+
+
+// --------------------------------------------------
 //  Generics.
 // --------------------------------------------------
 
-@import "generics/fonts";
-@import "generics/settings";
-@import "generics/base";
 @import "generics/animations";
 @import "generics/typography";
-@import "generics/site-properties";
 @import "generics/generic";
 
 
