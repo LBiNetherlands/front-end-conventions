@@ -1,0 +1,8 @@
+<!--#include file="includes/base/head.shtml" -->
+<div class="container">
+    <!--#include file="includes/components/header.shtml" -->
+    <main class="main">
+    </main>
+    <!--#include file="includes/components/footer.shtml" -->
+</div>
+<!--#include file="includes/base/tail.shtml" -->

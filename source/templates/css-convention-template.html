@@ -1,0 +1,41 @@
+<header class="convention-header">
+    <h1 class="convention-title">Introduction</h1>
+    <div class="convention-intro">
+        <p class="paragraph">
+            In all projects, but especially on large, long-running projects, with multiple developers of differing specialties and abilities, it is important that we work in a unified way in order to:
+            <ul class="list list--bulleted">
+                <li class="list__item">Make sure code and stylesheets are readable for other developers;</li>
+                <li class="list__item">Give developers a feeling of familiarity across codebases;</li>
+                <li class="list__item">Keep stylesheets scalable and maintainable;</li>
+            </ul>
+        </p>
+        <p>
+            This guide is meant as a reference for our developers and freelance developers that work for us. All developers working for DigitasLBi should strive in staying loyal to these guidelines. Any deviation from the rules in this styleguide must be fully justified.
+        </p>
+    </div>
+</header>
+
+
+{{#each sections}}
+<section class="section">
+    <header class="section__header">
+        <h3 class="section__title">
+            <span class="section__title__reference">{{@index}}</span>
+            {{title}}
+        </h3>
+        <p class="section__description">{{{description}}}</p>
+    </header>
+    {{#each items}}
+    <div class="convention-item">
+        <h5 class="item-title">
+            <span class="item-title__reference">{{@../index}}.{{@index}}</span>
+            {{{title}}}
+        </h5>
+        <p class="item-description">{{{description}}}</p>
+        {{#if code-snippet}}
+            <pre><code class="language-{{code-snippet.language}}">{{{code-snippet.code}}}</code></pre>
+        {{/if}}
+    </div>
+    {{/each}}
+</section>
+{{/each}}

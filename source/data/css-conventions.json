@@ -1,0 +1,110 @@
+{
+    "sections": [
+        {
+            "title": "Methodics, strategies and technologies",
+            "description": "In this section all used methodics, strategies and technologies are briefly explained and useful maybe even essential resources for learning and understanding them are given. These resources are mainly 3rd party so documentation is provided by these parties.",
+            "items": [
+                {
+                    "title": "Sass language (Syntactically Awesome StyleSheets)",
+                    "description": "Sass is an extension of the basic CSS language which gets compiled to regular CSS code. It allows the developer to use variables, nested rules, mixins, inline imports, and more. Sass helps in keeping large stylesheets well-organized, for the full Sass documentation go to <a class=\"link--text link--external\" href=\"http://sass-lang.com\" target=\"_blank\">http://sass-lang.com<i class=\"icon-external-link\"></i></a>."
+                },
+                {
+                    "title": "The BEM naming methodology",
+                    "description": "BEM is a naming methodology for structuring and creating meaningful class names and stands for 'Block', 'Element' and 'Modifier'. A short example is given below, for the full BEM documentation go to <a class=\"link--text link--external\" href=\"https://en.bem.info\" target=\"_blank\">https://en.bem.info<i class=\"icon-external-link\"></i></a>.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": ".block {}\n.block__element {}\n.block--modifier {}\n.block__element--modifier {}"
+                    }
+                },
+                {
+                    "title": "Mobile first",
+                    "description": "The CSS rules should be written mobile first. All styles that are targeted for other devices than the smallest should be written inside of a media query.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": ".element--modifier {\n    // Set the width for the smallest device (mobile first).\n    width: 100%;\n    @include respond-min($large) {\n        // Set the width for the device $large.\n        width: 50%;\n    }\n    @include respond-min($extra_large) {\n        // Set the width for the device $extra_large.\n        width: 25%;\n    }\n}"
+                    }
+                },
+                {
+                    "title": "Grunt",
+                    "description": "Grunt is a task runner that is used among other tasks for compiling Sass syntax to CSS and minifying it. By adding this these tasks to a watch task it will run when a Sass file is saved. More about this in the project setup section of this guide. For more information about Grunt check the official documentation at <a class=\"link--text link--external\" href=\"http://gruntjs.com\" target=\"_blank\">http://gruntjs.com<i class=\"icon-external-link\"></i></a>."
+                }
+            ]
+        },
+        {
+            "title": "Project setup",
+            "description": "This section is about our standardized project setup–the project setup consists of more then CSS, but here we'll focus on the CSS part of it. To make starting up a new project fast and simple there is a boilerplate project that can be found at <a class=\"link--text link--external\" href=\"https://github.com/LBiNetherlands/front-end-boilerplate-setup\" target=\"_blank\">https://github.com/LBiNetherlands/front-end-boilerplate-setup<i class=\"icon-external-link\"></i></a>.",
+            "items": [
+                {
+                    "title": "Sass file structure",
+                    "description": "This is about the Sass file structure.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": "scss\n  +-- components\n  |     +-- _footer.scss\n  |     +-- _header.scss\n  |\n  +-- configurations\n  |     +-- _base.scss\n  |     +-- _fonts.scss\n  |     +-- _settings.scss\n  |     +-- _site-properties.scss\n  |\n  +-- generics\n  |     +-- _animations.scss\n  |     +-- _typography.scss\n  |\n  +-- import.scss"
+                    }
+                },
+                {
+                    "title": "Sass import.scss",
+                    "description": "The Sass import.scss file is the main Sass file that imports all other files when being compiled by the Sass compiler.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": "// --------------------------------------------------\n//  Commons.\n// --------------------------------------------------\n\n@import \"susy\";\n@import \"../../node_modules/normalize-scss/normalize\";\n@import \"../../node_modules/prismjs/themes/prism-funky.css\";\n\n\n// --------------------------------------------------\n//  Generics.\n// --------------------------------------------------\n\n@import \"generics/fonts\";\n@import \"generics/settings\";\n@import \"generics/base\";\n@import \"generics/animations\";\n@import \"generics/typography\";\n@import \"generics/site-properties\";\n@import \"generics/generic\";\n\n\n// --------------------------------------------------\n//  Components.\n// --------------------------------------------------\n\n@import \"components/header\";\n@import \"components/footer\";\n@import \"components/convention\";"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Syntax",
+            "description": "Foobar is a description for the category to explain what kind of conventions are collected in this section.",
+            "items": [
+                {
+                    "title": "Multi word class name",
+                    "description": "If a class name consists of more then one word use a hyphen to separate them.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": ".page-head {}\n.sub-content {}"
+                    }
+                },
+                {
+                    "title": "Child element indentation",
+                    "description": "Indent your code properly, just like your HTML is structured, so a developer can see that .foo_baz lives inside .foo_bar lives inside .foo.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": ".foo {}\n    .foo__bar {}\n    .foo__baz {}"
+                    }
+                },
+                {
+                    "title": "Whitespace between sections",
+                    "description": "Use two empty lines between entirely new section.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": "// -------------------------------------------------------------------\n// Foo.\n// -------------------------------------------------------------------\n\n.foo {}\n\n\n// -------------------------------------------------------------------\n// Bar.\n// -------------------------------------------------------------------\n\n.bar {}"
+                    }
+                },
+                {
+                    "title": "Media queries",
+                    "description": "Use rem based media queries to target device capabilities.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": ".foobar {\n    @include respond-min(60rem) {}\n}"
+                    }
+                },
+                {
+                    "title": "Beginning of file comment",
+                    "description": "Begin every new file with a file name title and maybe some comments and references.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": "// **************************************************************************\n//\n// _filename.scss\n//\n// Large site headers act more like mastheads. They have a faux-\n// fluid-height which is controlled by the wrapping element inside // it.\n//\n// 1. Mastheads will typically have dark backgrounds, so we need to\n//    make sure the contrast is okay. This value is subject to change\n//    as the background image changes.\n//\n// ************************************************************************** \n\n.foobar {\n    color: $color-masthead; // [1]\n}"
+                    }
+                },
+                {
+                    "title": "Section comment",
+                    "description": "Begin every section with a title.",
+                    "code-snippet": {
+                        "language": "css",
+                        "code": "// -------------------------------------------------------------------\n// Foo.\n// -------------------------------------------------------------------\n\n.foo {}"
+                    }
+                }
+            ]
+        }
+    ]
+}

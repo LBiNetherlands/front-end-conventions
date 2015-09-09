@@ -1,0 +1,5 @@
+<footer class="footer">
+    <div class="footer-content">
+        This website and its content is copyright of <a class="link link--image" href="http://www.digitaslbi.com/nl/" target="_blank"><img class="footer-logo" src="static/images/logo_digitaslbi.svg"/></a> — © DigitasLBi 2015. All rights reserved.
+    </div>
+</footer>

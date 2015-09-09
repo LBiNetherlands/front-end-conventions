@@ -1,0 +1,49 @@
+// --------------------------------------------------
+// Links.
+// --------------------------------------------------
+
+.link--text {
+    color: $link_color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.link--external {
+    i {
+        font-size: 1rem;
+        margin-left: 0.125rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+
+// --------------------------------------------------
+// Lists.
+// --------------------------------------------------
+
+.list {
+    padding: 0;
+    margin: 0 0 1rem;
+    list-style: none;
+}
+.list--bulleted {
+    margin-left: 1.5rem;
+}
+.list__item {
+    position: relative;
+    &:before {
+        color: $c3;
+        content: ' ';
+        position: absolute;
+        top: 0.5rem;
+        width: 0.9rem;
+        height: 0.8rem;
+        margin-left: -1.5rem;
+        margin-right: 0.5rem;
+        background-image: url('../images/digitaslbi_bullet.svg');
+        background-repeat: no-repeat;
+        background-size: 0.8rem;
+    }
+}

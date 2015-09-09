@@ -1,0 +1,9 @@
+    <!-- Post document development JavaScript. -->
+    <script src="../source/js/project/config/require.js"></script>
+    <script src="../source/js/project/main.js"></script>
+
+    <!-- Post document production JavaScript. -->
+    <!-- <script src="../static/js/require.min.js"></script> -->
+
+</body>
+</html>
